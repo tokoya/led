@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>raspi-node.js</title>
+    <style type="text/css">
+    input.button {
+      width: 150px;
+      height: 50px;
+      font-size: 1.8em;
+    }
+    img.led {
+      width: 100px;
+      height: 100px;
+    }
+    </style>
+  </head>
+  <body>
+    <% if (message == "on") { %>
+    <img src="/images/led-on.png" class="led">
+    <% } %>
+    <% if (message == "off") { %>
+    <img src="/images/led-off.png" class="led">
+    <% } %>
+    <form method="GET" action="/users">
+      <input type="submit" name="onoff" value="on" class="button"/>
+      <input type="submit" name="onoff" value="off" class="button"/>
+    </form>
+  </body>
+</html>
